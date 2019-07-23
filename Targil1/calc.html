@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="myCalc">
+<head>
+    <title>Smart Calc</title>
+    <script src="angular.js"></script>
+    <script src="bootstrap.js"></script>
+    <script src="calcCtrl.js"></script>
+</head>
+<body ng-controller="calcCtrl">
+    <input type="number" id="first" ng-model="_first"></input>
+    <select id="action" ng-model="_action">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+      </select>
+    <input type="number" id="second" ng-model="_second"></input>
+    <button ng-click="result()">Result</button>  
+    <p> = {{_result}}</p>
+</body>
+</html>
